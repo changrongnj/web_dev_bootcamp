@@ -1,0 +1,20 @@
+li {
+	border:2px solid red;
+}
+
+div {
+	background: purple;
+}
+
+p {
+	color: yellow;
+}
+
+#special {
+	color:green;
+	background:yellow;
+}
+
+.completed {
+	text-decoration: line-through;
+}

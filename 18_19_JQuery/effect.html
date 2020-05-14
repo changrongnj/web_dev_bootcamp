@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JQuery Effects</title>
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.5.0.min.js"></script>
+	<style type="text/css">
+		div {
+			width: 100px;
+			height: 100px;
+			background: teal;
+			float: left;
+			margin: 20px;
+		}
+	</style>
+</head>
+<body>
+
+<p>CSS: transition</p>
+<p>JS: style.display("block"/"none")</p>
+
+<div>Please don't fade me!</div>
+<div>I'm begging you, please!</div>
+<div>Help help help!!!</div>
+
+<button>Click Me</button>
+
+<script type="text/javascript">
+	$('button').on("click", function() {
+
+		$('div').slideToggle(1000);  //slideDown, slideUp
+		// $('div').slideToggle(1000, function() {
+		// 	$(this).remove();
+		// });  
+
+		//$('div').fadeToggle(500);
+		//$('div').fadeOut(1000, function() {
+		//	console.log("fade completed");
+			//$(this).remove();  
+			// after 1000s fadeout and then deleted
+			// if this line was moved outside of animation, then it will be directly removed without waiting for fading out.
+		//});
+	});
+
+
+
+</script>
+
+</body>
+</html>

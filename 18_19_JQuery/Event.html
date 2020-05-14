@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JQuery Event</title>
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.5.0.min.js"></script>
+    <script type="text/javascript" src="lib/jquery-3.5.0.min.js"></script>
+</head>
+<body>
+
+<h1>JQeury Events</h1>
+
+<input type="text">
+
+<button>Don't Click Me</button>
+<button>Seriously, Don't Click Me</button>
+<button>This is your last warning!</button>
+
+
+<h1>difference between click() and on("click")</h1>
+<ul>
+	<li>Click() only adds listeners for existing elements</li>
+	<li>on() will add listeners for all potential future elements</li>
+	<li>This will all make sense in toDo project</li>
+</ul>
+
+<script type="text/javascript">
+
+	$("h1").click(function(){
+		alert("h1 clicked");
+	});
+
+	$("h1").on("click", function() {
+    	$(this).css("color", "purple"); 
+    });
+
+    $("button").click(function(){
+    	alert("button clicked");
+    	var text = $(this).text();
+    	console.log("You clicked " + text);
+    });
+    $("button").click(function() {
+    	$(this).css("background", "pink");
+    });
+    $("button").on("mouseenter", function() {  //js: mouseover
+    	$(this).css("font-weight", "bold");
+    });
+    $("button").on("mouseleave", function() {  //js: mouseout
+    	$(this).css("font-weight", "bold");
+    });
+
+
+    $("input[type='text']").keypress(function(event) {
+ 		if (event.which === 13) {
+ 			alert("You hit enter");
+ 		}
+	});
+
+
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Selector Exercise</title>
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.5.0.min.js"></script>
+</head>
+<body>
+
+<div>Div 1</div>
+<div class="highlight">Div 2</div>
+<div id="third">Div 3</div>
+<div class="highlight">Div 4</div>
+
+
+<script type="text/javascript">
+	$("div").css("background", "purple");
+	$("div.highlight").css("width", "200px");
+	$("#third").css("border", "2px solid orange");
+	$("div:first-of-type").css("color","pink"); //:first-of-type, build-in method
+	$("div:first").css("color","pink"); //slower than :first-of-type, 
+</script>
+
+<!-- <script type="text/javascript src="selectorExercise.js></script> -->
+<!-- have CDN js after title before body; the js developed by self should be placed at the end of body -->
+</body>
+</html>
+
+
+

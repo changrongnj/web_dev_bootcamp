@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Demo</title>
+	<style type="text/css">
+		.big {
+			font-size: 100px;
+			color: orange;
+			border: 5px solid red;
+		}
+		#small {
+			height: 500px;
+			weight: 500px;
+		}
+	</style>
+</head>
+<body>
+	<h1>Welcome to MY DOM Demo</h1>
+	<p>Corgi mixes are <strong>super</strong> adorable</p>
+	<a href="www.google.com">Link to google</a>
+	<ul>
+		<li>Orchids</li>
+		<li>Succulents</li>
+		<li>Tulips</li>
+	</ul>
+
+	<img id="small" src="https://image.shutterstock.com/z/stock-vector-backhoe-filled-outline-simple-icon-in-white-isolated-background-excavator-illustration-yellow-1690218727.jpg">
+	<img src="https://static.boredpanda.com/blog/wp-content/uploads/2017/05/corgi-mix-cross-breeds-18-591c39272d49f__605.jpg">
+</body>
+</html>
+
+
+
+<!-- In the Console ... -->
+<!-- 
+var p = document.querySelector("p");
+p.classList.add("big");
+p.classList.remove("big");
+p.classList.toggle("big"); 
+-->
+
+
+<!-- textContent property -->
+<!-- 
+document.body.textContent;
+var p = document.getElementsByTagName("p")[0];
+p.textContent
+var ul = document.querySelector("ul");
+ul.textContent;
+
+// --completely rewrite p content also remove css style such as strong embedded in h1 -- //
+document.querySelector("h1").textContent = "END OF THIS LESSON!";
+p.textContent = "Corgi mixes are really really super adorable";  
+
+//keep the style --- //
+ul.innerHTML;
+document.body.textContent = "<h1> GoodBye </h1>"; this does not keep the style of h1
+document.body.innerHTML = "<h1> GoodBye </h1>";
+ -->
+
+ <!-- setAttribute -->
+<!--  
+var a = document.querySelector("a");
+ a.setAttribute("href", "http://www.corgis.com");
+ a.textContent = "LINK TO CORGIS>COM"; 
+-->
+
+<!-- set attribute of google logo -->
+<!-- 
+logo.setAttribute("srcset", "https://image.shutterstock.com/z/stock-vector-backhoe-filled-outline-simple-icon-in-white-isolated-background-excavator-illustration-yellow-1690218727.jpg");
+logo.style.width = "300px";
+logo.style.border = "2px solid yellow";
+var links = document.getElementsByTagName("a");
+for (var i = 0; i < links.length; i++) {
+    links[i].style.background = "pink";
+    links[i].style.border = "1px dashed purple";}
+ -->

@@ -1,0 +1,24 @@
+<!-- <style>
+	body {
+		color: purple;
+	}
+</style> -->
+
+<%- include("partials/header") %>
+
+<h1>
+	Here is the Posts Page!
+</h1>
+
+<% for (var i=0; i<postsVar.length; i++){ %>
+	<li><%= postsVar[i].title%> - <%= postsVar[i].author%> </li>
+<% }%>
+
+
+<%	postsVar.forEach(function(post) { %>
+		<li>
+			<strong><%= post.title%></strong> - <%= post.author%>
+		</li> 
+<%	}); %>
+
+<%- include ("partials/footer") %>
